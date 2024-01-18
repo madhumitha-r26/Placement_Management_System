@@ -1,1 +1,1 @@
-# PostGraduation_Project
+# Placement Management System
