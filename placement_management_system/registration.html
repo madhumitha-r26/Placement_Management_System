@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Merriweather:wght@400;900&family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="topnav">
+        <a href="home.html">
+          <img src="img/project_logo.png" class="logo">
+        </a>
+  
+        <div class="menu">
+          <a href="login.html">Login</a>
+          <a href="registration.html">Registration</a>
+        </div>
+      </nav>
+
+    </header> 
+  
+    <center>
+      <h2><b>REGISTRATION</b></h2> 
+    </center>
+  <br>
+    <form method="post" action="register_submit.php" id="register-form">
+      
+      <div id="register">
+        <!-- <label>Upload photo</label><br>
+          <input type="image" required id="photo" class="form_elements" name="photo">
+        <br> -->
+
+          <label>Name</label><br>
+          <input type="text" placeholder="Enter your Name" 
+          required id="name" class="form_elements" name="name">
+        <br>
+
+        <label>
+          <i class="fa fa-solid fa-calendar"></i> Date of Birth</label><br>
+          <input type="date" placeholder="Enter your email id" 
+          required id="dob" name="dob" class="form_elements">
+          <br>
+          
+          <label>
+            <i class="fa fa-solid fa-user"></i>
+            Gender</label>
+            <div class="gen">
+            <input type="radio"  required id="gender" value="male" name="gender">Male
+            <input type="radio"  required id="gender" value="female" name="gender">Female
+          </div>
+                     
+      
+            
+            <label>
+              <div class="qual">
+              <i class="fa fa-solid fa-graduation-cap"></i>  Qualification</label><br>
+            </div>
+              <select name="qualification" required  id="qualification" class="form_elements">
+                <option value="select">-SELECT-</option>
+                <option value="B.E/B.Tech/M.E/M.Tech" name="qualification">B.E/B.Tech/M.E/M.Tech</option>
+                <option value="BBA/MBA/B.Com/M.Com" name="qualification">BBA/MBA/B.Com/M.Com</option>
+                <option value="M.Sc/MCA/B.Sc/BCA" name="qualification">M.Sc/MCA/B.Sc/BCA</option>
+                <option value="M.A/B.A" name="qualification">M.A/B.A</option>
+              </select>
+              <br>
+
+              <label>
+                <div class="year">
+                  <i class="fa fa-solid fa-globe"></i> Year of Qualification</label><br>
+              </div>
+                <select name="year" required  id="year" class="form_elements">
+                  <option value="select">-SELECT-</option>
+                  <option value="2024" name="year">2024</option>
+                  <option value="2023" name="year">2023</option>
+                  <option value="2022" name="year">2022</option>
+                  <option value="2021" name="year">2021</option>
+                  <option value="2020" name="year">2020</option>
+                </select>
+                <br>
+
+              <label>
+                <i class="fa fa-solid fa-building"></i>  Domain Interested</label><br>
+            
+                <select name="domain" required  id="domain" class="form_elements">
+                  <option value="select">-SELECT-</option>
+                  <option value="IT" name="domain">IT</option>
+                  <option value="Management" name="domain">Management</option>
+                  <option value="Sales" name="domain">Sales</option>
+                </select>
+                <br>
+
+                <label>
+                  <i class="fa fa-home"></i> City</label><br>
+                  <input type="text" placeholder="Enter your city" 
+                  required id="city" class="form_elements" name="city">
+                <br>
+
+                <label>
+                  <i class="fa fa-phone"></i> Phone</label><br>
+                  <input type="tel" placeholder="Enter your phone number"
+                   required id="phone" minlength="10" class="form_elements"
+                   name="phone">
+                <br>
+
+        <label>
+        <i class="fa fa-envelope"></i>   Email</label><br>
+        <input type="email" placeholder="Enter your email id" 
+        required id="email_id" class="form_elements" name="email">
+        <br>
+
+      <label>
+          <i class="fa fa-lock"></i> New Password
+      </label><br>
+      <div class="password-container">
+          <input type="password" placeholder="Enter your new password" id="password1" 
+          required minlength="8" name="new_password" class="form_elements">
+          <i class="fa fa-solid fa-eye" id="show-password1"></i>
+      </div>
+     
+      
+      <label>    
+          <i class="fa fa-lock"></i> Confirm Password
+      </label><br>
+      <div class="password-container">
+          <input type="password" placeholder="Confirm your password" 
+          required minlength="8" id="password2" name="confirm_password" class="form_elements">
+          <i class="fa fa-solid fa-eye" id="show-password2" ></i>
+      </div>
+      
+        <br>
+
+        <button type="submit" value="submit" name="submit">SUBMIT</button><br>
+      
+        <p style="text-align: center;padding-top: 15px;">Already have an account? 
+        <a href="user_login.html" class="sign">Sign In</a>
+      </p>
+      
+      </div>
+    </form>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+    crossorigin="anonymous"></script>
+    
+<script src="js/registration.js"></script>
+  </body>
+</html>
