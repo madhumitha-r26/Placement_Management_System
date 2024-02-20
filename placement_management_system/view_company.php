@@ -77,6 +77,7 @@ if(!$result)
     <th>Role</th>
     <th>Domain</th>
     <th>Salary</th>
+    <th>Location</th>
     <th>Description</th>
     <th> </th>
     </tr>";
@@ -89,6 +90,7 @@ if(!$result)
         echo "<td>" . $row['role'] . "</td>";
         echo "<td>" . $row['domain'] . "</td>";
         echo "<td>" . $row['salary'] . "</td>";
+        echo "<td>" . $row['location'] . "</td>";
         echo "<td>" . $row['description'] . "</td>";
         echo "<td> <button onclick=\"window.open('". $row['link'] ."','_blank')\"> APPLY HERE</button> 
        <button style='background-color:red' onclick=\"deleteRow('" . $row['job_id'] . "')\"> DELETE </button> </td>";
