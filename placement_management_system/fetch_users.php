@@ -50,6 +50,17 @@ while($row=mysqli_fetch_assoc($result))
 echo "</table>";
 echo "</center>";
 
+$sql2= "SELECT COUNT(*) as total_users FROM users";
+$result2=mysqli_query($conn,$sql2);
+if(!$result2)
+{
+    echo "Error:" .mysqli_error($conn);
+    exit;
+}
 
+$row2=mysqli_fetch_assoc($result2);
+echo "<center>";
+echo "<p><b>Total number of users registered:</b>" ."  " .$row2['total_users']. "</p>";
+echo "</center>";
 mysqli_close($conn);
 ?>
