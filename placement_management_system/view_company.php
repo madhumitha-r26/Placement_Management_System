@@ -43,7 +43,19 @@ if(!$result)
 <link rel="stylesheet" href="css/view_company.css">
     
 <title>View Company</title>
+<style>
+    .frame{
+        border:5px solid black;
+        width:500px;
+        height:auto;
+       padding:10px;
+       margin: auto;
+    }
 
+    h3{
+        text-align:center;
+    }
+</style>
 
 </head>
 <body>
@@ -98,17 +110,25 @@ if(!$result)
     }
 
     echo"</table>";
-    echo"</center>";
+    echo"</center>";?>
 
 
-    $sql5= "SELECT COUNT(domain) as Management_domain FROM company WHERE domain='Management'";
+<br>
+<div class="frame">
+    <center>
+<h3>TOTAL COUNT</h3></center>
+
+<?php
+$sql5= "SELECT COUNT(domain) as Management_domain FROM company WHERE domain='Management'";
 $result5=mysqli_query($conn,$sql5);
 if(!$result5)
 {
     echo "Error:" .mysqli_error($conn);
     exit;
 }
+?>
 
+<?php
 $row5=mysqli_fetch_assoc($result5);
 echo "<p><b>Total number of companies under Management domain:</b>" ."  " .$row5['Management_domain']. "</p>";
 
@@ -124,9 +144,12 @@ if(!$result6)
 
 $row6=mysqli_fetch_assoc($result6);
 echo "<p><b>Total number of companies under IT domain:</b>" ."  " .$row6['IT_domain']. "</p>";
+?>
+
+
+<?php
 
 //----------------------------------
-
 $sql7= "SELECT COUNT(domain) as Sales_domain FROM company WHERE domain='Sales'";
 $result7=mysqli_query($conn,$sql7);
 if(!$result7)
@@ -139,7 +162,7 @@ $row7=mysqli_fetch_assoc($result7);
 echo "<p><b>Total number of companies under Sales domain:</b>" ."  " .$row7['Sales_domain']. "</p>";
     mysqli_close($conn);    
     ?> 
-    
+</div>   
     <br>
     <div class="view">
     
