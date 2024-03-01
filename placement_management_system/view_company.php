@@ -51,10 +51,6 @@ if(!$result)
        padding:10px;
        margin: auto;
     }
-
-    h3{
-        text-align:center;
-    }
 </style>
 
 </head>
@@ -115,8 +111,7 @@ if(!$result)
 
 <br>
 <div class="frame">
-    <center>
-<h3>TOTAL COUNT</h3></center>
+
 
 <?php
 $sql5= "SELECT COUNT(domain) as Management_domain FROM company WHERE domain='Management'";
