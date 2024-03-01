@@ -58,7 +58,7 @@
  <br>
 <div class="frame">
     <center>
-<h3>COUNT</h3></center>
+<h3>TOTAL COUNT</h3></center>
 
 
 <?php include "count.php"?>
