@@ -20,7 +20,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/view_users.css">
     <title>VIEW USERS</title>
+<style>
+    .frame{
+        border:5px solid black;
+        width:500px;
+        height:auto;
+       padding:10px;
+       margin: auto;
+    }
 
+    h3{
+        text-align:center;
+    }
+</style>
 </head>
 <body>
 <div class="head1">
@@ -41,7 +53,17 @@
     <br>
     
 <h2>Users Registered</h2>
+
 <?php include "fetch_users.php"?>
+ <br>
+<div class="frame">
+    <center>
+<h3>COUNT</h3></center>
+
+
+<?php include "count.php"?>
+
+</div>
 
 <br>
 <div class="view">
