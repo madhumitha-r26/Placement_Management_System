@@ -99,6 +99,44 @@ if(!$result)
 
     echo"</table>";
     echo"</center>";
+
+
+    $sql5= "SELECT COUNT(domain) as Management_domain FROM company WHERE domain='Management'";
+$result5=mysqli_query($conn,$sql5);
+if(!$result5)
+{
+    echo "Error:" .mysqli_error($conn);
+    exit;
+}
+
+$row5=mysqli_fetch_assoc($result5);
+echo "<p><b>Total number of companies under Management domain:</b>" ."  " .$row5['Management_domain']. "</p>";
+
+//----------------------------------
+
+$sql6= "SELECT COUNT(domain) as IT_domain FROM company WHERE domain='IT'";
+$result6=mysqli_query($conn,$sql6);
+if(!$result6)
+{
+    echo "Error:" .mysqli_error($conn);
+    exit;
+}
+
+$row6=mysqli_fetch_assoc($result6);
+echo "<p><b>Total number of companies under IT domain:</b>" ."  " .$row6['IT_domain']. "</p>";
+
+//----------------------------------
+
+$sql7= "SELECT COUNT(domain) as Sales_domain FROM company WHERE domain='Sales'";
+$result7=mysqli_query($conn,$sql7);
+if(!$result7)
+{
+    echo "Error:" .mysqli_error($conn);
+    exit;
+}
+
+$row7=mysqli_fetch_assoc($result7);
+echo "<p><b>Total number of companies under Sales domain:</b>" ."  " .$row7['Sales_domain']. "</p>";
     mysqli_close($conn);    
     ?> 
     
