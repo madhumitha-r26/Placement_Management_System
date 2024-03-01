@@ -29,9 +29,6 @@
        margin: auto;
     }
 
-    h3{
-        text-align:center;
-    }
 </style>
 </head>
 <body>
@@ -57,9 +54,6 @@
 <?php include "fetch_users.php"?>
  <br>
 <div class="frame">
-    <center>
-<h3>TOTAL COUNT</h3></center>
-
 
 <?php include "count.php"?>
 
