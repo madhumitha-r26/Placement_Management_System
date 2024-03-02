@@ -111,7 +111,21 @@ if(!$result)
 
 <br>
 <div class="frame">
+<?php
+$sql4= "SELECT COUNT(*) as Domain FROM company";
+$result4=mysqli_query($conn,$sql4);
+if(!$result4)
+{
+    echo "Error:" .mysqli_error($conn);
+    exit;
+}
+?>
 
+<?php
+$row4=mysqli_fetch_assoc($result4);
+echo "<p><b>Total number of companies:</b>" ."  " .$row4['Domain']. "</p>";
+//-----------------------------------------------------------
+?>
 
 <?php
 $sql5= "SELECT COUNT(domain) as Management_domain FROM company WHERE domain='Management'";
