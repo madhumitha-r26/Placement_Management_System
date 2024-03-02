@@ -51,6 +51,12 @@ if(!$result)
        padding:10px;
        margin: auto;
     }
+
+    button{
+        display: flex;
+        margin: 5px;
+    }
+    
 </style>
 
 </head>
@@ -87,7 +93,9 @@ if(!$result)
     <th>Salary</th>
     <th>Location</th>
     <th>Description</th>
-    <th> </th>
+    <th>Apply link</th>
+    <th>Modify </th>
+    
     </tr>";
     
     while($row=mysqli_fetch_assoc($result))
@@ -100,9 +108,11 @@ if(!$result)
         echo "<td>" . $row['salary'] . "</td>";
         echo "<td>" . $row['location'] . "</td>";
         echo "<td>" . $row['description'] . "</td>";
-        echo "<td> <button onclick=\"window.open('". $row['link'] ."','_blank')\"> APPLY HERE</button> 
-       <button style='background-color:red' onclick=\"deleteRow('" . $row['job_id'] . "')\"> DELETE </button> </td>";
-        echo "</tr>";
+        echo "<td> <button onclick=\"window.open('". $row['link'] ."','_blank')\"> APPLY HERE</button> </td>
+        <td> <button style='background-color:red' onclick=\"deleteRow('" . $row['job_id'] . "')\"> DELETE </button>  
+        <button style='background-color:green' onclick=\"editRow('" . $row['job_id'] . "')\"> EDIT </button>
+       </td>";
+       echo "</tr>";
     }
 
     echo"</table>";
@@ -185,6 +195,12 @@ echo "<p><b>Total number of companies under Sales domain:</b>" ."  " .$row7['Sal
     function deleteRow(id) {
         if (confirm("Are you sure you want to delete this company?")) {
             window.location.href = "delete_company.php?id=" + id;
+        }
+    }
+
+    function editRow(id) {
+        if (confirm("Are you sure you want to edit this company?")) {
+            window.location.href = "edit_company.php?id=" + id;
         }
     }
 </script>
