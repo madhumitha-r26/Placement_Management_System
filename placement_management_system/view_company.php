@@ -52,11 +52,17 @@ if(!$result)
        margin: auto;
     }
 
-    button{
-        display: flex;
-        margin: 5px;
+    button{     
+        margin: 2px;
+        text-align: center;
+        padding: auto;
+        font-size: 12px; 
+        display: flex;    
     }
-    
+  
+    .vc{
+        margin: 10px;
+    }
 </style>
 
 </head>
@@ -76,6 +82,8 @@ if(!$result)
     </div>
 
 </div>
+
+<div class="vc">
     <?php
     echo "<center>";
     echo"<h1>Companies</h1>";
@@ -94,7 +102,7 @@ if(!$result)
     <th>Location</th>
     <th>Description</th>
     <th>Apply link</th>
-    <th>Modify </th>
+    <th>Modification </th>
     
     </tr>";
     
@@ -191,6 +199,7 @@ echo "<p><b>Total number of companies under Sales domain:</b>" ."  " .$row7['Sal
         <button class="btn">ADD COMPANY</button></a>
 </div>
 
+</div>
 <script>
     function deleteRow(id) {
         if (confirm("Are you sure you want to delete this company?")) {
