@@ -142,7 +142,7 @@ mysqli_close($conn);
     </form>
     <br>  
       <div class="view">        
-        <a href="admin.html">
+        <a href="view_company.php">
             <button style="width: 500px; border-radius: 5px;">BACK</button></a>
        
     </div>
