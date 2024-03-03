@@ -140,5 +140,11 @@ mysqli_close($conn);
         <button type="submit">UPDATE COMPANY</button>
     </div>
     </form>
+    <br>  
+      <div class="view">        
+        <a href="admin.html">
+            <button style="width: 500px; border-radius: 5px;">BACK</button></a>
+       
+    </div>
 </body>
 </html>
