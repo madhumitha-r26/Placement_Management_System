@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 29, 2024 at 05:18 AM
+-- Generation Time: Mar 04, 2024 at 08:19 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -45,7 +45,9 @@ CREATE TABLE `company` (
 INSERT INTO `company` (`job_id`, `name`, `role`, `domain`, `location`, `salary`, `description`, `link`) VALUES
 ('0QIC9', 'Moon Team Private Limited', 'Sales Executive', 'Sales', 'chennai', 20000, 'Proficiency in English and prefer knowledge of the local language, especially when it is a field sales job (Example: distribution management in the retail sector)', 'https://www.freshersworld.com/jobs/sales-executive-jobs-opening-in-1-moon-team-private-limited-at-vepery-chennai-2264663'),
 ('23D0QX', 'UST Global', 'Python programmer', 'IT', 'kochi', 15000, ' Should be excel in Python or Python+ SQL and with good communication skills and enthusiastic working nature with excellent academic background.', 'https://www.freshersworld.com/jobs/company/ust-global-2266839'),
+('25LOD', 'PIXEL WEB SOLUTIONS', 'software engineer', 'IT', 'location', 30000, 'Strong written and oral communication skills\r\n• Interest to pursue career in IT\r\n• Ability to learn quickly and work in the fastest growing technology company in Madurai', 'https://jobs.smartrecruiters.com/PixelWebSolutions/743999971247744-hiring-freshers?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic'),
 ('445UBH', 'IBM', 'process associate', 'Management', 'hyderabad', 30000, 'Engage stakeholders to define, build and document hiring forecasts\r\nWork with hiring manager to set Service Level Agreements (SLA) expectations and requirements', 'https://www.naukri.com/job-listings-process-associate-recruitment-ibm-india-pvt-limited-hyderabad-0-to-2-years-260224904082?src=cluster&sid=17091787328081851_4&xp=2&px=1'),
+('597YN', 'The Entrepreneurship Netw', ' HR intern ', 'Management', 'Delhi', 15000, 'Familiarity with MS excel (analysing spreadsheets and charts).\r\nExcellent communication and Negotiation Skills, ability to deliver engaging presentations.\r\nAbility to collaborate with team members, Self-Motivated and organized.', 'https://www.freshersworld.com/jobs/human-resources-hr-intern-jobs-opening-in-ten-hr-consulting-at-rajouri-garden-delhi-2278364'),
 ('85RL100', 'accenture', 'hr associate', 'Management', 'mumbai', 30000, 'Ability to manage multiple stakeholders and  to perform under pressure', 'https://www.naukri.com/job-listings-hr-service-delivery-new-associate-accenture-solutions-pvt-ltd-mumbai-0-to-1-years-270224906507?src=cluster&sid=17091787328081851_3&xp=4&px=1'),
 ('85RL89', 'Purple technologies', 'Marketing intern', 'Sales', 'hyderabad', 10000, 'Faster learning ability and passion for sales\r\nSelf-motivated professional with a result-oriented approach', 'https://www.freshersworld.com/jobs/marketing-intern-jobs-opening-in-fianance-credit-at-a-s-rao-nagar-kukatpally-andheri-west-mumbai-kolkata-hyderabad-2273983'),
 ('9648gk', 'google', 'software engineer', 'IT', 'hyderabad', 30000, 'Bachelor’s degree or equivalent practical experience with software development in one or more programming languages (e.g., Python, C, C++, Java, JavaScript).', 'https://www.google.com/about/careers/applications/jobs/results/132262270928331462-software-engineer-fullstack-core'),
