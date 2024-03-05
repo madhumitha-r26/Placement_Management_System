@@ -87,17 +87,17 @@
   }
   
   
-    th{
-      background-color:lightgreen;
-      border: 2px black solid;
-      text-align: center;
-    }
-  
-    td{
-     background-color:lightblue;
-     border: 2px black solid;
-     text-align: justify;
-    }
+  th{
+    background-color:#d2691e;
+    border: 2px black solid;
+    text-align: center;
+    color: beige;
+  }
+
+  td{
+   background-color:lightgoldenrodyellow;
+   border: 2px black solid;
+  }
   
   tr{
       height:auto;
