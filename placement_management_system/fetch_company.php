@@ -48,13 +48,14 @@
 
 
   th{
-    background-color:lightgreen;
+    background-color:#d2691e;
     border: 2px black solid;
     text-align: center;
+    color: beige;
   }
 
   td{
-   background-color:lightblue;
+   background-color:lightgoldenrodyellow;
    border: 2px black solid;
   }
 
