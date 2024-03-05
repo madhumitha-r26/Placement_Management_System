@@ -32,6 +32,7 @@ if(!$result)
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Merriweather:wght@400;900&family=Red+Hat+Display&display=swap" rel="stylesheet">
@@ -62,6 +63,12 @@ if(!$result)
   
     .vc{
         margin: 10px;
+    }
+
+    .fa{
+        color: aliceblue;
+        height: auto;
+        padding-right: 5px;
     }
 </style>
 
@@ -102,7 +109,7 @@ if(!$result)
     <th>Location</th>
     <th>Description</th>
     <th>Apply link</th>
-    <th>Modification </th>
+    <th> </th>
     
     </tr>";
     
@@ -117,8 +124,12 @@ if(!$result)
         echo "<td>" . $row['location'] . "</td>";
         echo "<td>" . $row['description'] . "</td>";
         echo "<td> <button onclick=\"window.open('". $row['link'] ."','_blank')\"> APPLY HERE</button> </td>
-        <td> <button style='background-color:red' onclick=\"deleteRow('" . $row['job_id'] . "')\"> DELETE </button>  
-        <button style='background-color:green' onclick=\"editRow('" . $row['job_id'] . "')\"> EDIT </button>
+        <td>   
+        <button style='background-color:green' onclick=\"editRow('" . $row['job_id'] . "')\"> 
+        <span class='material-symbols-outlined'>edit</span><b>EDIT</b> </button>
+
+        <button style='background-color:red' onclick=\"deleteRow('" . $row['job_id'] . "')\">
+        <span class='material-symbols-outlined'>delete</span> <b>  DELETE </b></button>
        </td>";
        echo "</tr>";
     }
