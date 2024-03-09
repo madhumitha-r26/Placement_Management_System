@@ -111,7 +111,6 @@ if (isset($_POST['update'])) {
     <button type="submit" value="submit" name="update">UPDATE</button>
 </form>
 
-
 </script>
 </body>
 </html>
