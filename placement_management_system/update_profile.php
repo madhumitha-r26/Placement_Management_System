@@ -92,17 +92,17 @@ if (isset($_POST['update'])) {
     <h1>EDIT PROFILE</h1>
 </center>
 <form method="post" id="edit" action="update_profile.php">
-<label>Email</label>
+<label>Email</label><span style="color: red;">*</span>
     <input type="email" placeholder="Enter your Email"  id="email" class="form_elements" name="email" ><br>
 
 <hr>
-    <label>Name</label>
+    <label>Name</label><span style="color: red;">*</span>
     <input type="text" placeholder="Enter your Name"  id="name" class="form_elements" name="name" ><br>
 
-    <label>City</label>
+    <label>City</label><span style="color: red;">*</span>
     <input type="text" placeholder="Enter your city"  id="name" class="form_elements" name="city"><br>
 
-    <label>Phone</label>
+    <label>Phone</label><span style="color: red;">*</span>
     <input type="tel" placeholder="Enter your phone number"  id="phone" minlength="10" class="form_elements" name="phone"><br>
 
     
