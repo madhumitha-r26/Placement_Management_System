@@ -33,11 +33,12 @@ VALUES ('$name','$dob','$gender','$qualification','$year',
 '$new_password','$confirm_password')";
 
 $result=mysqli_query($conn,$sql);
-if(!$result)
-{
-    echo "Error:" .mysqli_error($conn);
-    exit;
-}
+ if(!$result)
+ {
+    echo '<script> alert ("Email already exists.");
+    window.location.href="registration.html";
+    </script>';
+ }
 echo '<script>alert("Registration Successful");
 window.location.href="login.html";
 </script>'; 
