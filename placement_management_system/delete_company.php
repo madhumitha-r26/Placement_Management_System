@@ -1,13 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "pms";
+$db_hostname="127.0.0.1";
+$db_username="root";
+$db_password="";
+$db_name="pms";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
+$conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
