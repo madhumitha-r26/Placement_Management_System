@@ -35,7 +35,7 @@ VALUES ('$name','$dob','$gender','$qualification','$year',
 $result=mysqli_query($conn,$sql);
  if(!$result)
  {
-    echo '<script> alert ("Email already exists.");
+    echo '<script> alert ("Account already exists.");
     window.location.href="registration.html";
     </script>';
  }
