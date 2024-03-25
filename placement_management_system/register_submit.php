@@ -38,6 +38,7 @@ $result=mysqli_query($conn,$sql);
     echo '<script> alert ("Account already exists.");
     window.location.href="registration.html";
     </script>';
+     exit;
  }
 echo '<script>alert("Registration Successful");
 window.location.href="login.html";
