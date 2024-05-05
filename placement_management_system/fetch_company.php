@@ -47,23 +47,31 @@
   }
 
 
-  th{
-    background-color:#d2691e;
+ th{
+    background-color:#2b2929;
     border: 2px black solid;
     text-align: center;
     color: beige;
   }
 
   td{
-   background-color:lightgoldenrodyellow;
-   border: 2px black solid;
+     border: 2px black solid;
   }
 
-tr{
+tr:nth-child(even){
     height:auto;
     width: 100%;
     word-wrap: break-word;
     border: 2px black solid;
+    background-color:rgb(255, 255, 232);
+}
+
+tr:nth-child(odd){
+    height:auto;
+    width: 100%;
+    word-wrap: break-word;
+    border: 2px black solid;
+    background-color:rgb(213, 213, 169);
 }
 
 .view{
@@ -73,8 +81,11 @@ tr{
 }
 
 table{
+    margin: 50px;
     border: 2px black solid;
+    padding: 50px;
 }
+    
 h1{
     text-align: center;
     font-weight: 500;
