@@ -123,7 +123,15 @@ mysqli_close($conn);
         <input type="text" name="role" id="role" value="<?php echo $row['role']; ?>" required class="form_elements"><br>
 
         <label for="domain">Domain:</label>
-        <input type="text" name="domain" id="domain" value="<?php echo $row['domain']; ?>" required class="form_elements"><br>
+        <select name="domain" id="domain" required class="form_elements">
+            <?php
+                $domains= array("IT", "Management", "Sales");
+                foreach ($domains as $domain) 
+                {
+                    echo "<option value='". $domain. "'>". $domain. "</option>";
+                }
+            ?>
+        </select><br>
 
         <label for="salary">Salary:</label>
         <input type="number" name="salary" id="salary" value="<?php echo $row['salary']; ?>" required class="form_elements"><br>
@@ -137,7 +145,7 @@ mysqli_close($conn);
         <label for="link">Link:</label>
         <input type="url" name="link" id="link" class="form_elements" value="<?php echo $row['link']; ?>" required><br>
 
-        <button type="submit">UPDATE COMPANY</button>
+        <button type="submit">UPDATE JOB</button>
     </div>
     </form>
     <br>  
