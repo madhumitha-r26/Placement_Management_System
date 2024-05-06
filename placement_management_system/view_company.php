@@ -207,7 +207,7 @@ echo "<p><b>Total number of companies under Sales domain:</b>" ."  " .$row7['Sal
     <a href="admin.html" >
         <button class="btn">BACK</button></a>
     <a href="add_company.html" >
-        <button class="btn">ADD COMPANY</button></a>
+        <button class="btn">ADD JOB</button></a>
 </div>
 
 </div>
