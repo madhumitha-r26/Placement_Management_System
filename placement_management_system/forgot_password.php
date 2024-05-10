@@ -17,20 +17,39 @@ if (isset($_POST['change_password'])) {
     $new_password = $_POST['new_password'];
     $confirm_password = $_POST['confirm_password'];
 
+    if($new_password != $confirm_password)
+    {
+       echo '<script>'.
+       'alert("Password does not match");'.
+       'window.location.href="user_login.html";'.
+       '</script>';
+    }
+
+    elseif(($new_password === $confirm_password))
+    {
     $sql = "UPDATE users SET
             new_password='$new_password',
             confirm_password='$confirm_password'  
             WHERE email='$email'";
 
     $result = mysqli_query($conn, $sql);
+
     if (!$result) {
         echo "Error: " . mysqli_error($conn);
         exit;
     } 
-    echo '<script>';
-        echo 'alert("Password changed successfully")';
-        echo 'window.location.href="user_login.html"';
-        echo '</script>';
+    echo '<script>'.
+       'alert("Password changed successfully");'.
+       'window.location.href="user_login.html";'.
+       '</script>';
+  }
+else{
+  echo '<script>'.
+       'alert("Invalid credentials");'.
+       'window.location.href="user_login.html";'.
+       '</script>';
+}
+
     mysqli_close($conn);
 }
 ?>
