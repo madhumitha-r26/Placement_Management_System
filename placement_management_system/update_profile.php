@@ -105,8 +105,15 @@ if (isset($_POST['update'])) {
     <label>Phone</label><span style="color: red;">*</span>
     <input type="tel" placeholder="Enter your phone number"  id="phone" minlength="10" class="form_elements" name="phone"><br>
 
-    
-            <br><br>
+    <label>Domain</label><span style="color: red;">*</span>
+            
+                <select name="domain" required  id="domain" class="form_elements">
+                  <option value="select">-SELECT-</option>
+                  <option value="IT" name="domain">IT</option>
+                  <option value="Management" name="domain">Management</option>
+                  <option value="Sales" name="domain">Sales</option>
+                </select>
+                <br>
 
     <button type="submit" value="submit" name="update">UPDATE</button>
 </form>
