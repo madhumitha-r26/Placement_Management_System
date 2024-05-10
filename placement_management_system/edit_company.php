@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_query($conn, $sql)) {     
         echo '<script>' .
-        'alert("Company record is updated");' .
+        'alert("Job record is updated");' .
         'window.location.href="view_company.php";' .
         '</script>';
         
