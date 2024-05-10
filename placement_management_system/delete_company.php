@@ -17,12 +17,12 @@ $stmt->bind_param("s", $id);
 
 if ($stmt->execute()) {
     echo '<script>' .
-      'alert("Company record is deleted");' .
+      'alert("Job record is deleted");' .
       'window.location.href="view_company.php";' .
       '</script>';
 } else {
     echo '<script>' .
-    'alert("Company record is not deleted");' .
+    'alert("Job record is not deleted");' .
     'window.location.href="view_company.php";'  .
     '</script>'. $stmt->error;
 }
