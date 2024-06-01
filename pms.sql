@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2024 at 02:17 PM
+-- Generation Time: Mar 16, 2024 at 09:30 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -24,6 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `company`
+--
+
+CREATE TABLE `company` (
+  `job_id` varchar(25) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `role` varchar(25) NOT NULL,
+  `domain` enum('IT','Sales','Management','') NOT NULL,
+  `location` varchar(25) NOT NULL,
+  `salary` int(5) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `company`
+--
+
+INSERT INTO `company` (`job_id`, `name`, `role`, `domain`, `location`, `salary`, `description`, `link`) VALUES
+('0QIC9', 'Moon Team Private Limited', 'Sales Executive', 'Sales', 'chennai', 20000, 'Proficiency in English and prefer knowledge of the local language, especially when it is a field sales job (Example: distribution management in the retail sector)', 'https://www.freshersworld.com/jobs/sales-executive-jobs-opening-in-1-moon-team-private-limited-at-vepery-chennai-2264663'),
+('23D0QX', 'UST Global', 'Python programmer', 'IT', 'kochi', 15000, ' Should be excel in Python or Python+ SQL and with good communication skills and enthusiastic working nature with excellent academic background.', 'https://www.freshersworld.com/jobs/company/ust-global-2266839'),
+('85RL100', 'accenture', 'hr associate', 'Management', 'mumbai', 30000, 'Ability to manage multiple stakeholders and  to perform under pressure', 'https://www.naukri.com/job-listings-hr-service-delivery-new-associate-accenture-solutions-pvt-ltd-mumbai-0-to-1-years-270224906507?src=cluster&sid=17091787328081851_3&xp=4&px=1'),
+('85RL89', 'Purple technologies', 'Marketing intern', 'Sales', 'hyderabad', 10000, 'Faster learning ability and passion for sales\r\nSelf-motivated professional with a result-oriented approach', 'https://www.freshersworld.com/jobs/marketing-intern-jobs-opening-in-fianance-credit-at-a-s-rao-nagar-kukatpally-andheri-west-mumbai-kolkata-hyderabad-2273983'),
+('9648gk', 'google', 'software engineer', 'IT', 'hyderabad', 30000, 'Bachelor’s degree or equivalent practical experience with software development in one or more programming languages (e.g., Python, C, C++, Java, JavaScript).', 'https://www.google.com/about/careers/applications/jobs/results/132262270928331462-software-engineer-fullstack-core'),
+('AL458', 'CTS', 'programmer analyst', 'IT', 'bangalore', 15000, 'Understanding the functional aspects of the clients requirement.', 'https://careers.cognizant.com/in/en/job/00042905731/Programmer-Analyst-Trainee');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `feedback`
 --
 
@@ -39,39 +68,8 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`name`, `phone`, `email`, `feedback`) VALUES
-('bablu', 5986201470, 'baabu@gmail.com', 'very good service'),
-('diya', 5848446487, 'diya@gmail.com', 'Hi freshers target, \r\nFinally got placed in my dream company thanks for the services provided by you'),
-('madhu', 638792802123, 'madhu@gmail.com', 'nice web'),
+('baabu', 5986201470, 'baabu@gmail.com', 'very good service'),
 ('nivetha', 7892001452, 'nivetha@yahoo.com', 'want more job listings');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `job`
---
-
-CREATE TABLE `job` (
-  `job_id` varchar(25) NOT NULL,
-  `name` varchar(25) NOT NULL,
-  `role` varchar(25) NOT NULL,
-  `domain` enum('IT','Sales','Management','') NOT NULL,
-  `location` varchar(25) NOT NULL,
-  `salary` int(5) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `link` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `job`
---
-
-INSERT INTO `job` (`job_id`, `name`, `role`, `domain`, `location`, `salary`, `description`, `link`) VALUES
-(' 67743', 'S&P Global', 'data associate', 'IT', 'mumbai', 30000, 'Support team members in executing high-priority projects.\r\nConduct research and gather pertinent information to back ongoing initiatives.', 'https://careers.spglobal.com/jobs/300637?lang=en-us'),
-('527cDTY', 'Zoho', 'Sales Executive', 'Sales', 'chennai', 25000, 'Build rapport with contacts and understand where the prospect is in the buying process.\r\nIdentify opportunities that meet a minimum qualification criteria for the sales team.\r\nTend incoming sales calls and emails, and assign them to sales reps.', 'https://careers.zohocorp.com/jobs/Careers/2803000614929688/Sales-Executives?source=CareerSite'),
-('607', 'Ipsos', 'Management Trainee', 'Management', 'bangalore', 15000, 'should have effective communication', 'https://ecqf.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/IpsosCareers/job/607'),
-('85RL100', 'Accenture', 'hr associate', 'Management', 'mumbai', 30000, 'Ability to manage multiple stakeholders and  to perform under pressure', 'https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01508243_en&SRC=RECNau'),
-('85W1Nz', 'Zoho', 'QA Engineers', 'IT', 'chennai', 30000, 'Experience in manual and automation testing.\r\nKnowledge of Java Programming (data types, variables, operators, flow control statements, methods (built-in as well as user-defined), Exception handling, File Handling, Database Operations, and OOPS concepts.\r', 'https://www.zoho.com/careers/jobdetails/?job_id=2803000614913581'),
-('AL458', 'CTS', 'programmer analyst', 'IT', 'bangalore', 15000, 'Understanding the functional aspects of the clients requirement.', 'https://careers.cognizant.com/in/en/job/00042905731/Programmer-Analyst-Trainee');
 
 -- --------------------------------------------------------
 
@@ -98,13 +96,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`name`, `dob`, `gender`, `qualification`, `domain`, `city`, `year`, `phone`, `email`, `new_password`, `confirm_password`) VALUES
-('ammu', '2004-09-08', 'Female', 'BBA/MBA/B.Com/M.Com', 'Sales', 'madurai', '2024', 2486119734, 'ammu@gmail.com', 'ammu1234', 'ammu1234'),
-('bablu', '2005-07-20', 'Male', 'BBA/MBA/B.Com/M.Com', 'Management', 'chennai', '2022', 8902341168, 'bablu@gmail.com', 'bablu123', 'bablu123'),
 ('diya', '2004-03-25', 'Female', 'B.E/B.Tech/M.E/M.Tech', 'Sales', 'chennai', '2024', 5848446487, 'diya@gmail.com', 'diya1234', 'diya1234'),
-('kannan', '2003-04-09', 'Male', 'M.A/B.A', 'Management', 'mysore', '2023', 8016459870, 'kannan@gmail.com', 'laddoo123', 'laddoo123'),
-('madhumitha', '2002-03-26', 'Female', 'M.Sc/MCA/B.Sc/BCA', 'IT', 'madurai', '2024', 5865697368, 'madhumitha@gmail.com', 'madhu263', 'madhu263'),
+('madhumitha', '2002-03-26', 'Female', 'M.Sc/MCA/B.Sc/BCA', 'IT', 'madurai', '2024', 6789883110, 'madhu@gmail.com', 'madhu263', 'madhu263'),
 ('nivetha', '2004-07-26', 'Female', 'M.A/B.A', 'Management', 'madurai', '2024', 7892001452, 'nivetha@yahoo.com', 'nivipapa', 'nivipapa'),
-('peter', '2004-11-17', 'Male', 'B.E/B.Tech/M.E/M.Tech', 'Management', 'madurai', '2024', 1455785542, 'peter@gmail.com', 'peter1117', 'peter1117'),
 ('yamini', '2005-02-23', 'Female', 'B.E/B.Tech/M.E/M.Tech', 'IT', 'kerala', '2023', 8965412580, 'yamini@gmail.com', 'yamini95', 'yamini95');
 
 --
@@ -112,16 +106,16 @@ INSERT INTO `users` (`name`, `dob`, `gender`, `qualification`, `domain`, `city`,
 --
 
 --
+-- Indexes for table `company`
+--
+ALTER TABLE `company`
+  ADD PRIMARY KEY (`job_id`);
+
+--
 -- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`email`);
-
---
--- Indexes for table `job`
---
-ALTER TABLE `job`
-  ADD PRIMARY KEY (`job_id`);
 
 --
 -- Indexes for table `users`
