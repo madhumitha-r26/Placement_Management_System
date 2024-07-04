@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2024 at 09:30 AM
+-- Generation Time: Jul 04, 2024 at 04:51 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -20,35 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `pms`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `company`
---
-
-CREATE TABLE `company` (
-  `job_id` varchar(25) NOT NULL,
-  `name` varchar(25) NOT NULL,
-  `role` varchar(25) NOT NULL,
-  `domain` enum('IT','Sales','Management','') NOT NULL,
-  `location` varchar(25) NOT NULL,
-  `salary` int(5) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `link` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `company`
---
-
-INSERT INTO `company` (`job_id`, `name`, `role`, `domain`, `location`, `salary`, `description`, `link`) VALUES
-('0QIC9', 'Moon Team Private Limited', 'Sales Executive', 'Sales', 'chennai', 20000, 'Proficiency in English and prefer knowledge of the local language, especially when it is a field sales job (Example: distribution management in the retail sector)', 'https://www.freshersworld.com/jobs/sales-executive-jobs-opening-in-1-moon-team-private-limited-at-vepery-chennai-2264663'),
-('23D0QX', 'UST Global', 'Python programmer', 'IT', 'kochi', 15000, ' Should be excel in Python or Python+ SQL and with good communication skills and enthusiastic working nature with excellent academic background.', 'https://www.freshersworld.com/jobs/company/ust-global-2266839'),
-('85RL100', 'accenture', 'hr associate', 'Management', 'mumbai', 30000, 'Ability to manage multiple stakeholders and  to perform under pressure', 'https://www.naukri.com/job-listings-hr-service-delivery-new-associate-accenture-solutions-pvt-ltd-mumbai-0-to-1-years-270224906507?src=cluster&sid=17091787328081851_3&xp=4&px=1'),
-('85RL89', 'Purple technologies', 'Marketing intern', 'Sales', 'hyderabad', 10000, 'Faster learning ability and passion for sales\r\nSelf-motivated professional with a result-oriented approach', 'https://www.freshersworld.com/jobs/marketing-intern-jobs-opening-in-fianance-credit-at-a-s-rao-nagar-kukatpally-andheri-west-mumbai-kolkata-hyderabad-2273983'),
-('9648gk', 'google', 'software engineer', 'IT', 'hyderabad', 30000, 'Bachelor’s degree or equivalent practical experience with software development in one or more programming languages (e.g., Python, C, C++, Java, JavaScript).', 'https://www.google.com/about/careers/applications/jobs/results/132262270928331462-software-engineer-fullstack-core'),
-('AL458', 'CTS', 'programmer analyst', 'IT', 'bangalore', 15000, 'Understanding the functional aspects of the clients requirement.', 'https://careers.cognizant.com/in/en/job/00042905731/Programmer-Analyst-Trainee');
 
 -- --------------------------------------------------------
 
@@ -70,6 +41,35 @@ CREATE TABLE `feedback` (
 INSERT INTO `feedback` (`name`, `phone`, `email`, `feedback`) VALUES
 ('baabu', 5986201470, 'baabu@gmail.com', 'very good service'),
 ('nivetha', 7892001452, 'nivetha@yahoo.com', 'want more job listings');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `job`
+--
+
+CREATE TABLE `job` (
+  `job_id` varchar(25) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `role` varchar(25) NOT NULL,
+  `domain` enum('IT','Sales','Management','') NOT NULL,
+  `location` varchar(25) NOT NULL,
+  `salary` int(5) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `job`
+--
+
+INSERT INTO `job` (`job_id`, `name`, `role`, `domain`, `location`, `salary`, `description`, `link`) VALUES
+('0QIC9', 'Moon Team Private Limited', 'Sales Executive', 'Sales', 'chennai', 20000, 'Proficiency in English and prefer knowledge of the local language, especially when it is a field sales job (Example: distribution management in the retail sector)', 'https://www.freshersworld.com/jobs/sales-executive-jobs-opening-in-1-moon-team-private-limited-at-vepery-chennai-2264663'),
+('23D0QX', 'UST Global', 'Python programmer', 'IT', 'kochi', 15000, ' Should be excel in Python or Python+ SQL and with good communication skills and enthusiastic working nature with excellent academic background.', 'https://www.freshersworld.com/jobs/company/ust-global-2266839'),
+('85RL100', 'accenture', 'hr associate', 'Management', 'mumbai', 30000, 'Ability to manage multiple stakeholders and  to perform under pressure', 'https://www.naukri.com/job-listings-hr-service-delivery-new-associate-accenture-solutions-pvt-ltd-mumbai-0-to-1-years-270224906507?src=cluster&sid=17091787328081851_3&xp=4&px=1'),
+('85RL89', 'Purple technologies', 'Marketing intern', 'Sales', 'hyderabad', 10000, 'Faster learning ability and passion for sales\r\nSelf-motivated professional with a result-oriented approach', 'https://www.freshersworld.com/jobs/marketing-intern-jobs-opening-in-fianance-credit-at-a-s-rao-nagar-kukatpally-andheri-west-mumbai-kolkata-hyderabad-2273983'),
+('9648gk', 'google', 'software engineer', 'IT', 'hyderabad', 30000, 'Bachelor’s degree or equivalent practical experience with software development in one or more programming languages (e.g., Python, C, C++, Java, JavaScript).', 'https://www.google.com/about/careers/applications/jobs/results/132262270928331462-software-engineer-fullstack-core'),
+('AL458', 'CTS', 'programmer analyst', 'IT', 'bangalore', 15000, 'Understanding the functional aspects of the clients requirement.', 'https://careers.cognizant.com/in/en/job/00042905731/Programmer-Analyst-Trainee');
 
 -- --------------------------------------------------------
 
@@ -106,16 +106,16 @@ INSERT INTO `users` (`name`, `dob`, `gender`, `qualification`, `domain`, `city`,
 --
 
 --
--- Indexes for table `company`
---
-ALTER TABLE `company`
-  ADD PRIMARY KEY (`job_id`);
-
---
 -- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`email`);
+
+--
+-- Indexes for table `job`
+--
+ALTER TABLE `job`
+  ADD PRIMARY KEY (`job_id`);
 
 --
 -- Indexes for table `users`
