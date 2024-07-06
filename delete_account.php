@@ -22,10 +22,10 @@ if (mysqli_num_rows($result) > 0) {
     echo '<script>' . 
           'if (confirm("Are you sure you want to delete this account?")) {' . 
           'alert("Account is deleted");' . 
-          'window.location.href="home.html";' . 
+          'window.location.href="index.html";' . 
           '} else {' . 
           'alert("Account deletion cancelled");' . 
-          'window.location.href="home.html";' . 
+          'window.location.href="index.html";' . 
           '}</script>';
 
     $sql = "DELETE FROM users WHERE email = ?";
