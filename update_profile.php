@@ -16,8 +16,10 @@ if (isset($_POST['update'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $city = mysqli_real_escape_string($conn, $_POST['city']);
     $phone = mysqli_real_escape_string($conn, $_POST["phone"]);
+    $domain = mysqli_real_escape_string($conn, $_POST["domain"]);
 
-    $sql = "UPDATE users SET name='$name', city='$city', phone='$phone' WHERE email='$email'";
+
+    $sql = "UPDATE users SET name='$name', city='$city', phone='$phone', domain='$domain' WHERE email='$email'";
 
     $result = mysqli_query($conn, $sql);
 
